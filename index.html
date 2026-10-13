@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050a0d" />
+    <meta
+      name="description"
+      content="KCC Webzine - 남다른 안목, Discerning Eye"
+    />
+    <title>KCC Webzine</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#hero" aria-label="KCC Webzine 홈">
+        <img
+          class="brand__logo"
+          src="./assets/kcc-webzine-logo.png"
+          alt="KCC Webzine"
+          width="398"
+          height="92"
+        />
+        <img class="brand__logo brand__logo--light" src="./assets/logo2.png" alt="" width="398" height="92" aria-hidden="true" />
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="메뉴 열기"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+        data-menu-toggle
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-navigation" aria-label="주요 메뉴" data-menu>
+        <a href="#special">SPECIAL</a>
+        <a href="#inside">INSIDE</a>
+        <a href="#outside">OUTSIDE</a>
+        <a href="#news">NEWS</a>
+        <a href="#event">EVENT</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button notification-button" type="button" aria-label="알림">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4" />
+          </svg>
+          <span class="notification-dot"></span>
+        </button>
+        <button class="icon-button search-button" type="button" aria-label="검색">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="10.8" cy="10.8" r="7.3" />
+            <path d="m16.2 16.2 5 5" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <button class="event-backdrop" type="button" aria-label="이벤트 닫기" tabindex="-1" aria-hidden="true" data-event-backdrop></button>
+    <aside class="event-drawer" id="event" data-event-drawer>
+      <section class="event-panel" role="dialog" aria-modal="true" aria-label="AI 동료 밸런스 이벤트" aria-hidden="true" data-event-panel inert>
+        <button class="event-panel__close" type="button" aria-label="이벤트 닫기" data-event-close>
+          <span></span>
+          <span></span>
+        </button>
+        <h2 class="visually-hidden">AI 동료 밸런스</h2>
+        <p class="visually-hidden">AI에게 말할 때, 나는? 반말파 VS 존댓말파</p>
+        <div class="event-poll__choices" role="group" aria-label="말투 선택">
+          <button class="event-poll__choice" type="button" aria-pressed="false" data-poll-choice>
+            <span class="event-poll__badge">A. 반말파</span>
+            <strong>“이거 세 줄로 정리해줘.”</strong>
+            <span class="event-poll__description">친해졌는데 굳이 존댓말까지?</span>
+          </button>
+          <button class="event-poll__choice" type="button" aria-pressed="false" data-poll-choice>
+            <span class="event-poll__badge event-poll__badge--formal">B. 존댓말파</span>
+            <strong>“이거 세 줄로 정리해줘.”</strong>
+            <span class="event-poll__description">친해졌는데 굳이 존댓말까지?</span>
+          </button>
+        </div>
+        <div class="event-poll__results" aria-label="반말 47퍼센트, 존댓말 53퍼센트. 1,286명 참여 중">
+          <div class="event-poll__result-header" aria-hidden="true">
+            <div class="event-poll__side"><span>반말</span><span class="event-poll__percentage"><span data-poll-count="47" data-poll-informal>0</span>%</span></div>
+            <span class="event-poll__vs">VS</span>
+            <div class="event-poll__side event-poll__side--formal"><span>존댓말</span><span class="event-poll__percentage"><span data-poll-count="53">0</span>%</span></div>
+          </div>
+          <div class="event-poll__gauge" aria-hidden="true"><div class="event-poll__gauge-fill" data-poll-gauge></div></div>
+          <p class="event-poll__participants"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="5" r="4" /><path d="M2 18v-3a8 8 0 0 1 16 0v3c-4 2-12 2-16 0" /></svg><span>1,286명 참여 중</span></p>
+        </div>
+      </section>
+      <button
+        class="event-tab"
+        type="button"
+        aria-label="이벤트 열기"
+        aria-controls="event"
+        aria-expanded="false"
+        data-event-toggle
+      >
+        <span>EVENT</span>
+      </button>
+    </aside>
+
+    <main>
+      <section class="scroll-sequence" id="hero" aria-label="KCC Webzine 메인" data-scroll-sequence>
+        <div class="sequence-stage" data-sequence-stage>
+        <div class="hero" data-hero-layer>
+        <video
+          class="hero__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          data-hero-video
+        >
+          <source src="./assets/main_back.mov" type="video/mp4" />
+        </video>
+        <div class="hero__shade" aria-hidden="true"></div>
+
+        <div class="hero__content">
+          <h1 class="visually-hidden">남다른 안목, Discerning Eye</h1>
+          <img
+            class="hero__title"
+            src="./assets/title.png"
+            alt="남다른 안목, Discerning Eye"
+            width="2715"
+            height="517"
+          />
+        </div>
+
+        <button class="scroll-guide" type="button" aria-label="다음 콘텐츠로 이동" data-scroll-guide>
+          <span class="scroll-guide__mouse" aria-hidden="true">
+            <span class="scroll-guide__wheel"></span>
+          </span>
+        </button>
+
+        <p class="video-fallback" role="status" hidden data-video-fallback>
+          배경 영상을 불러오지 못했습니다.
+        </p>
+        </div>
+
+        <section class="vision" aria-labelledby="vision-heading" data-vision>
+          <div class="vision__objects" aria-hidden="true">
+            <img class="vision__object vision__object--ring" src="./assets/s1.png" alt="" width="665" height="567" data-object data-speed="0.115" />
+            <img class="vision__object vision__object--ribbon" src="./assets/s2.png" alt="" width="777" height="560" data-object data-speed="0.12" />
+            <img class="vision__object vision__object--back-ring" src="./assets/s3.png" alt="" width="382" height="455" data-object data-speed="0.045" />
+            <img class="vision__object vision__object--back-lens" src="./assets/s4.png" alt="" width="288" height="273" data-object data-speed="0.06" />
+          </div>
+          <div class="vision__copy" data-vision-copy>
+            <h2 id="vision-heading" class="vision__heading" aria-label="같은 일상에서도 새로운 가능성을 발견하는 시선">
+              <span class="vision__line" data-fill-line aria-hidden="true">같은 일상에서도</span>
+              <span class="vision__line" data-fill-line aria-hidden="true">새로운 가능성을 발견하는 시선</span>
+            </h2>
+          </div>
+          <div class="vision__copy" data-vision-copy-next>
+            <h2 class="vision__heading" aria-label="KCC와 함께, 익숙한 세상을 새롭게 바라봅니다.">
+              <span class="vision__line" data-fill-line aria-hidden="true">KCC와 함께, 익숙한 세상을</span>
+              <span class="vision__line" data-fill-line aria-hidden="true">새롭게 바라봅니다.</span>
+            </h2>
+          </div>
+        </section>
+
+        <section class="special" id="special" aria-labelledby="special-heading" data-special inert>
+          <div class="special__header">
+            <h2 id="special-heading"><img src="./assets/spl.png" width="325" height="95" alt="SPECIAL" /></h2>
+            <button class="special__more" type="button" aria-label="SPECIAL 목차 (준비 중)">
+              <span aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="special__carousel" role="region" aria-roledescription="캐러셀" aria-label="SPECIAL 칼럼" tabindex="0" data-carousel>
+            <div class="special__slides" data-slides></div>
+            <!-- 각 카드의 href, 제목, 설명을 이 HTML에서 수정하세요. #은 임시 링크입니다. -->
+            <template data-slide-template>
+              <article class="special__card">
+                <a class="special__thumbnail" href="#">
+                  <img src="./assets/spl_th_1.png" alt="클라이밍장에서 함께하는 두 사람" width="728" height="512" draggable="false" />
+                  <div class="special__overlay">
+                    <h4>손톱만 한 케비가 잠입했다</h4>
+                    <p>AI가 수많은 답을 내놓는 시대에 인간의 한 끗 차이가 중요함을 이야기하는 코너. AI 시대에 인간의 판단력이 중요해지는 산업·문화 트렌드.</p>
+                    <span class="special__detail">자세히 보기</span>
+                  </div>
+                </a>
+                <h3>KCC MASTER</h3>
+              </article>
+            </template>
+            <template data-slide-template>
+              <article class="special__card">
+                <a class="special__thumbnail" href="#">
+                  <img src="./assets/spl_th_2.png" alt="파랑, 흰색, 주황색 페인트의 물결" width="728" height="512" draggable="false" />
+                  <div class="special__overlay">
+                    <h4>손톱만 한 케비가 잠입했다</h4>
+                    <p>AI가 수많은 답을 내놓는 시대에 인간의 한 끗 차이가 중요함을 이야기하는 코너. AI 시대에 인간의 판단력이 중요해지는 산업·문화 트렌드.</p>
+                    <span class="special__detail">자세히 보기</span>
+                  </div>
+                </a>
+                <h3>KCC MASTER</h3>
+              </article>
+            </template>
+            <template data-slide-template>
+              <article class="special__card">
+                <a class="special__thumbnail" href="#">
+                  <img src="./assets/spl_th_3.png" alt="KCC 공장의 안전모를 쓴 비버 캐릭터" width="728" height="512" draggable="false" />
+                  <div class="special__overlay">
+                    <h4>손톱만 한 케비가 잠입했다</h4>
+                    <p>AI가 수많은 답을 내놓는 시대에 인간의 한 끗 차이가 중요함을 이야기하는 코너. AI 시대에 인간의 판단력이 중요해지는 산업·문화 트렌드.</p>
+                    <span class="special__detail">자세히 보기</span>
+                  </div>
+                </a>
+                <h3>1%의 힘</h3>
+              </article>
+            </template>
+            <button class="special__arrow special__arrow--prev" type="button" aria-label="이전 슬라이드" data-slide-prev>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 4-8 8 8 8" /></svg>
+            </button>
+            <button class="special__arrow special__arrow--next" type="button" aria-label="다음 슬라이드" data-slide-next>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 4 8 8-8 8" /></svg>
+            </button>
+            <p class="visually-hidden" aria-live="polite" data-slide-status></p>
+          </div>
+        </section>
+        </div>
+      </section>
+
+      <section class="inside" id="inside" aria-labelledby="inside-heading" data-inside>
+        <div class="inside__inner">
+          <div class="inside__header">
+            <h2 id="inside-heading"><img src="./assets/inti_1.png" alt="INSIDE" width="243" height="94" /></h2>
+            <button class="special__more inside__more" type="button" aria-label="INSIDE 목차 (준비 중)"><span aria-hidden="true"></span></button>
+          </div>
+          <!-- 제목, 설명, href는 각 카드에서 직접 수정할 수 있습니다. -->
+          <div class="inside__grid">
+            <article class="inside__card inside__card--featured">
+              <a class="special__thumbnail inside__thumbnail" href="#">
+                <img src="./assets/in_th_1.png" width="606" height="384" alt="안전화 끈을 타고 올라가는 케비" loading="lazy" />
+                <div class="special__overlay inside__overlay">
+                  <h4>손톱만 한 케비가 잠입했다</h4>
+                  <p>AI가 수많은 답을 내놓는 시대에 인간의 한 끗 차이가 중요함을 이야기하는 코너. AI 시대에 인간의 판단력이 중요해지는 산업·문화 트렌드.</p>
+                  <span class="special__detail">자세히 보기</span>
+                </div>
+              </a>
+              <h3>케비의 은밀한 출장</h3>
+            </article>
+            <article class="inside__card">
+              <a class="special__thumbnail inside__thumbnail" href="#">
+                <img src="./assets/in_th_2.png" width="606" height="384" alt="함께 모여 이야기를 나누는 KCC 팀원들" loading="lazy" />
+                <div class="special__overlay inside__overlay">
+                  <h4>손톱만 한 케비가 잠입했다</h4>
+                  <p>AI가 수많은 답을 내놓는 시대에 인간의 한 끗 차이가 중요함을 이야기하는 코너. AI 시대에 인간의 판단력이 중요해지는 산업·문화 트렌드.</p>
+                  <span class="special__detail">자세히 보기</span>
+                </div>
+              </a>
+              <h3>팀캐를 찾아라!</h3>
+            </article>
+            <article class="inside__card">
+              <a class="special__thumbnail inside__thumbnail" href="#">
+                <img src="./assets/in_th_3.png" width="606" height="384" alt="요트에서 함께 하트 모양을 만드는 두 사람" loading="lazy" />
+                <div class="special__overlay inside__overlay">
+                  <h4>손톱만 한 케비가 잠입했다</h4>
+                  <p>AI가 수많은 답을 내놓는 시대에 인간의 한 끗 차이가 중요함을 이야기하는 코너. AI 시대에 인간의 판단력이 중요해지는 산업·문화 트렌드.</p>
+                  <span class="special__detail">자세히 보기</span>
+                </div>
+              </a>
+              <h3>아몰따 KCC</h3>
+            </article>
+            <article class="inside__card">
+              <a class="special__thumbnail inside__thumbnail" href="#">
+                <img src="./assets/in_th_4.png" width="606" height="384" alt="파도 위에서 서핑을 즐기는 두 사람" loading="lazy" />
+                <div class="special__overlay inside__overlay">
+                  <h4>손톱만 한 케비가 잠입했다</h4>
+                  <p>AI가 수많은 답을 내놓는 시대에 인간의 한 끗 차이가 중요함을 이야기하는 코너. AI 시대에 인간의 판단력이 중요해지는 산업·문화 트렌드.</p>
+                  <span class="special__detail">자세히 보기</span>
+                </div>
+              </a>
+              <h3>우리회사 F5 위원회</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="inside outside" id="outside" aria-labelledby="outside-heading">
+        <div class="inside__inner">
+          <div class="inside__header">
+            <h2 id="outside-heading"><img src="./assets/outi_1.png" alt="OUTSIDE" width="301" height="94" /></h2>
+            <button class="special__more inside__more" type="button" aria-label="OUTSIDE 목차 (준비 중)"><span aria-hidden="true"></span></button>
+          </div>
+          <!-- INSIDE와 공통 카드 스타일을 사용합니다. 제목, 설명, href는 여기서 수정하세요. -->
+          <div class="inside__grid">
+            <article class="inside__card">
+              <a class="special__thumbnail inside__thumbnail" href="#">
+                <img src="./assets/ou_th_1.png" width="606" height="384" alt="주기율표의 실리콘 원소" loading="lazy" />
+                <div class="special__overlay inside__overlay">
+                  <h4>손톱만 한 케비가 잠입했다</h4>
+                  <p>AI가 수많은 답을 내놓는 시대에 인간의 한 끗 차이가 중요함을 이야기하는 코너. AI 시대에 인간의 판단력이 중요해지는 산업·문화 트렌드.</p>
+                  <span class="special__detail">자세히 보기</span>
+                </div>
+              </a>
+              <h3>ROOM SOS</h3>
+            </article>
+            <article class="inside__card">
+              <a class="special__thumbnail inside__thumbnail" href="#">
+                <img src="./assets/ou_th_2.png" width="606" height="384" alt="제품 샘플을 소개하는 두 사람" loading="lazy" />
+                <div class="special__overlay inside__overlay">
+                  <h4>손톱만 한 케비가 잠입했다</h4>
+                  <p>AI가 수많은 답을 내놓는 시대에 인간의 한 끗 차이가 중요함을 이야기하는 코너. AI 시대에 인간의 판단력이 중요해지는 산업·문화 트렌드.</p>
+                  <span class="special__detail">자세히 보기</span>
+                </div>
+              </a>
+              <h3>VS 추구미</h3>
+            </article>
+            <article class="inside__card">
+              <a class="special__thumbnail inside__thumbnail" href="#">
+                <img src="./assets/ou_th_3.png" width="606" height="384" alt="주황빛 창문이 빛나는 입체적인 건축 구조" loading="lazy" />
+                <div class="special__overlay inside__overlay">
+                  <h4>손톱만 한 케비가 잠입했다</h4>
+                  <p>AI가 수많은 답을 내놓는 시대에 인간의 한 끗 차이가 중요함을 이야기하는 코너. AI 시대에 인간의 판단력이 중요해지는 산업·문화 트렌드.</p>
+                  <span class="special__detail">자세히 보기</span>
+                </div>
+              </a>
+              <h3>재료의 인문학</h3>
+            </article>
+            <article class="inside__card">
+              <a class="special__thumbnail inside__thumbnail" href="#">
+                <img src="./assets/ou_th_4.png" width="606" height="384" alt="도심의 유리 외벽 빌딩" loading="lazy" />
+                <div class="special__overlay inside__overlay">
+                  <h4>손톱만 한 케비가 잠입했다</h4>
+                  <p>AI가 수많은 답을 내놓는 시대에 인간의 한 끗 차이가 중요함을 이야기하는 코너. AI 시대에 인간의 판단력이 중요해지는 산업·문화 트렌드.</p>
+                  <span class="special__detail">자세히 보기</span>
+                </div>
+              </a>
+              <h3>사이의 기술</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="inside news" id="news" aria-labelledby="news-heading" data-news>
+        <div class="inside__inner">
+          <div class="inside__header news__header">
+            <h2 id="news-heading" class="news__heading"><img src="./assets/neti_1.png" alt="NEWS 우리들의 새로운 소식" width="446" height="94" /></h2>
+            <button class="special__more inside__more" type="button" aria-label="NEWS 목차 (준비 중)"><span aria-hidden="true"></span></button>
+          </div>
+          <div class="news__layout">
+            <div class="news__preview" role="tabpanel" id="news-preview" aria-labelledby="news-tab-1">
+              <img class="news__image is-active" src="./assets/ne_th_1.png" width="606" height="499" alt="가수 김수철" data-news-image loading="lazy" />
+              <img class="news__image" src="./assets/ne_th_2.png" width="606" height="499" alt="KCC 이맥스 창호 고객 감사 이벤트" data-news-image aria-hidden="true" loading="lazy" />
+              <img class="news__image" src="./assets/ne_th_3.png" width="606" height="499" alt="한국웰니스지수 1위 인증 수상식" data-news-image aria-hidden="true" loading="lazy" />
+            </div>
+            <!-- 제목과 날짜는 HTML에서 수정하세요. 선택은 마우스를 떼어도 유지됩니다. -->
+            <div class="news__list" role="tablist" aria-label="뉴스 선택" aria-orientation="vertical">
+              <button class="news__item is-active" type="button" role="tab" id="news-tab-1" aria-controls="news-preview" aria-selected="true" data-news-item>
+                <span class="news__item-title">‘젊은 그대’의 작은거인 김수철 부산 KCC이지스 26~27시즌 신규 응원곡 작사·작곡 발표</span>
+                <time datetime="2026-10-07">2026.10.07</time>
+              </button>
+              <button class="news__item" type="button" role="tab" id="news-tab-2" aria-controls="news-preview" aria-selected="false" tabindex="-1" data-news-item>
+                <span class="news__item-title">KCC, 한국웰니스지수 창호재 부문 7년 연속 1위 기념 고객 감사 이벤트 진행</span>
+                <time datetime="2026-09-21">2026.09.21</time>
+              </button>
+              <button class="news__item" type="button" role="tab" id="news-tab-3" aria-controls="news-preview" aria-selected="false" tabindex="-1" data-news-item>
+                <span class="news__item-title">2026년 한국웰니스지수(Wellness) KCC, 창호·친환경페인트·천장재 등 3개 부문 1위</span>
+                <time datetime="2026-09-11">2026.09.11</time>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <button class="back-to-top" type="button" aria-label="맨 위로 이동" data-back-to-top hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 15 7-7 7 7" /></svg>
+      </button>
+
+      <!-- 다음 화면은 전달받는 순서대로 이 아래에 추가할 수 있습니다. -->
+    </main>
+    <footer class="site-footer" data-footer>
+      <div class="site-footer__top">
+        <div class="site-footer__inner site-footer__top-inner">
+          <a class="site-footer__brand" href="#hero" aria-label="KCC Webzine 홈"><img src="./assets/f_logo_1.png" width="74" height="46" alt="KCC" /></a>
+          <!-- SNS와 개인정보처리방침의 #을 실제 이동 주소로 교체하세요. -->
+          <nav class="site-footer__socials" aria-label="KCC 소셜 미디어">
+            <a href="#" aria-label="KCC 유튜브"><img src="./assets/f_icon_1.png" width="36" height="35" alt="" /></a>
+            <a href="#" aria-label="KCC 블로그"><img src="./assets/f_icon_2.png" width="36" height="35" alt="" /></a>
+            <a href="#" aria-label="KCC 페이스북"><img src="./assets/f_icon_3.png" width="36" height="35" alt="" /></a>
+            <a class="site-footer__instagram" href="#" aria-label="KCC 인스타그램 kccworld"><img src="./assets/f_icon_4.png" width="36" height="35" alt="" /><span>@kccworld</span></a>
+            <a class="site-footer__instagram" href="#" aria-label="SUPRO 인스타그램 supro_kcc"><img src="./assets/f_icon_4.png" width="36" height="35" alt="" /><span>@supro_kcc</span></a>
+            <a class="site-footer__instagram" href="#" aria-label="KLENZE 인스타그램 klenze_"><img src="./assets/f_icon_4.png" width="36" height="35" alt="" /><span>@klenze_</span></a>
+          </nav>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <div class="site-footer__inner site-footer__bottom-inner">
+          <div class="site-footer__info">
+            <a class="site-footer__privacy" href="#">개인정보처리방침</a>
+            <span>서울특별시 서초구 사평대로 344</span>
+            <a href="tel:0800228200">고객상담실 080-022-8200</a>
+            <a href="tel:0234805000">대표번호 02-3480-5000</a>
+          </div>
+          <p class="site-footer__copyright">COPYRIGHT (C) 2022 KCC CORPORATION.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

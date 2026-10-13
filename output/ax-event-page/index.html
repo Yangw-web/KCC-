@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1080, initial-scale=1" />
+  <title>현장르포 AX특집</title>
+  <style>
+    :root{
+      --navy:#07111f;
+      --navy2:#0b1d31;
+      --ink:#111827;
+      --muted:#667085;
+      --blue:#36c5f0;
+      --blue2:#0a84ff;
+      --red:#ed1c24;
+      --paper:#f4f7fa;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;width:1080px;background:var(--paper);font-family:"Pretendard","Noto Sans KR","Malgun Gothic",sans-serif;color:var(--ink);word-break:keep-all}
+    body{overflow-x:hidden}
+    .page{width:1080px;min-height:7000px;background:#fff;position:relative;overflow:hidden}
+    .hero{height:1640px;position:relative;color:#fff;background:var(--navy) url('./factory-hero.png') center bottom/cover no-repeat;overflow:hidden}
+    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,10,20,.94) 0%,rgba(4,12,23,.72) 26%,rgba(5,14,26,.14) 66%,rgba(5,14,26,.92) 100%)}
+    .hero:after{content:"";position:absolute;width:760px;height:760px;border-radius:50%;left:-390px;top:270px;border:1px solid rgba(54,197,240,.28);box-shadow:0 0 0 72px rgba(54,197,240,.035),0 0 0 144px rgba(54,197,240,.025)}
+    .hero-inner{position:relative;z-index:2;padding:88px 84px}
+    .edition{display:flex;align-items:center;gap:18px;font-size:22px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+    .edition .line{width:62px;height:3px;background:var(--red)}
+    .edition .special{color:var(--blue)}
+    .hero-copy{margin-top:200px}
+    .kicker{font-size:25px;font-weight:700;letter-spacing:.18em;color:#b9d9eb;margin-bottom:24px}
+    h1{margin:0;font-size:112px;line-height:1.04;letter-spacing:-.075em;font-weight:900;text-shadow:0 8px 36px rgba(0,0,0,.32)}
+    h1 .accent{color:#fff;position:relative;display:inline-block}
+    h1 .accent:after{content:"";position:absolute;left:2px;right:2px;bottom:5px;height:12px;background:var(--red);z-index:-1}
+    .subtitle{margin-top:34px;font-size:47px;line-height:1.3;font-weight:750;letter-spacing:-.045em;color:#edf7ff}
+    .time-chip{margin-top:54px;display:inline-flex;align-items:center;gap:20px;border:1px solid rgba(255,255,255,.28);background:rgba(5,18,32,.72);backdrop-filter:blur(12px);padding:18px 26px;border-radius:999px;font-size:19px;font-weight:800;letter-spacing:.08em}
+    .time-chip strong{font-size:29px;letter-spacing:-.02em}.time-chip .arrow{color:var(--blue);font-size:28px}
+    .scroll-cue{position:absolute;z-index:2;right:76px;bottom:62px;writing-mode:vertical-rl;font-size:13px;letter-spacing:.23em;color:rgba(255,255,255,.68);display:flex;align-items:center;gap:12px}
+    .scroll-cue:after{content:"";width:1px;height:72px;background:linear-gradient(var(--blue),transparent)}
+
+    .intro-wrap{position:relative;background:#fff;padding:0 70px 125px}
+    .intro-card{position:relative;margin-top:-120px;z-index:4;background:#fff;border-radius:3px;padding:72px 70px 62px;box-shadow:0 26px 65px rgba(15,33,51,.16);border-top:8px solid var(--red)}
+    .intro-card .tag{font-size:16px;letter-spacing:.16em;font-weight:900;color:var(--red);margin-bottom:28px}
+    .intro-card p{margin:0;font-size:27px;line-height:1.92;letter-spacing:-.027em;color:#273445}
+    .editor-note{margin-top:28px;text-align:right;font-size:18px;font-weight:750;color:#7a8798}
+    .editor-note span{color:var(--red);margin-right:8px}
+
+    .video-section{background:var(--navy);padding:98px 70px 110px;color:#fff;position:relative}
+    .video-section:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 0%,rgba(13,147,255,.2),transparent 38%)}
+    .section-head{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:end;margin-bottom:34px}
+    .section-no{font-size:15px;letter-spacing:.18em;font-weight:800;color:var(--blue)}
+    .section-label{font-size:25px;font-weight:850;letter-spacing:-.03em}
+    .video{height:520px;position:relative;z-index:2;border:1px solid rgba(255,255,255,.14);background:linear-gradient(135deg,rgba(31,58,82,.78),rgba(5,12,22,.96)),url('./factory-hero.png') center 64%/cover no-repeat;box-shadow:0 28px 60px rgba(0,0,0,.4);overflow:hidden}
+    .video:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,10,18,.8),transparent 72%)}
+    .play{position:absolute;width:112px;height:112px;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);border:1px solid rgba(255,255,255,.58);background:rgba(5,20,34,.66);display:grid;place-items:center;box-shadow:0 0 0 18px rgba(255,255,255,.06)}
+    .play:after{content:"";margin-left:9px;border-left:30px solid #fff;border-top:20px solid transparent;border-bottom:20px solid transparent}
+    .video-title{position:absolute;left:42px;bottom:38px;font-size:18px;font-weight:800;letter-spacing:.06em;color:#d8edfb}
+    .video-time{position:absolute;right:26px;bottom:24px;background:rgba(0,0,0,.68);padding:9px 12px;font-size:14px;border-radius:3px}
+
+    .why{padding:130px 84px 128px;background:#f7f9fb;position:relative;overflow:hidden}
+    .why .ghost{position:absolute;right:-18px;top:42px;font-size:270px;font-weight:950;color:#ebf0f4;letter-spacing:-.1em}
+    .eyebrow{position:relative;font-size:16px;font-weight:900;color:var(--blue2);letter-spacing:.16em;text-transform:uppercase}
+    .why h2{position:relative;margin:23px 0 48px;font-size:64px;line-height:1.16;letter-spacing:-.055em}
+    .why p{position:relative;margin:0;font-size:27px;line-height:1.9;letter-spacing:-.025em;color:#354254}
+    .quote{position:relative;margin-top:66px;padding:49px 52px 48px 62px;background:#fff;border-left:8px solid var(--blue2);box-shadow:0 14px 36px rgba(41,58,76,.09)}
+    .quote:before{content:"“";position:absolute;left:20px;top:8px;color:#bfeaff;font-family:Georgia,serif;font-size:82px}
+    .quote p{font-size:25px;line-height:1.8;font-weight:720;color:#152235}
+    .quote .who{margin-top:26px;font-size:17px;color:#758194;font-weight:800}
+
+    .agents-intro{height:500px;background:linear-gradient(135deg,#07111f,#0c2942);color:#fff;display:flex;align-items:center;padding:0 84px;position:relative;overflow:hidden}
+    .agents-intro:after{content:"04";position:absolute;right:42px;bottom:-78px;font-size:330px;font-weight:950;color:rgba(255,255,255,.045);letter-spacing:-.08em}
+    .agents-intro .dot-grid{position:absolute;inset:0;background-image:radial-gradient(rgba(83,200,255,.23) 1px,transparent 1px);background-size:24px 24px;mask-image:linear-gradient(90deg,transparent,black)}
+    .agents-intro .copy{position:relative;z-index:2;max-width:770px}
+    .agents-intro .small{font-size:18px;letter-spacing:.16em;color:var(--blue);font-weight:900}
+    .agents-intro h2{margin:22px 0 0;font-size:57px;line-height:1.28;letter-spacing:-.05em}
+    .agents-intro p{font-size:25px;line-height:1.7;color:#b9cada;margin:28px 0 0}
+
+    .agent{padding:125px 84px 150px;background:#fff}
+    .agent-top{display:flex;align-items:flex-start;gap:32px}
+    .agent-num{flex:0 0 90px;font-size:95px;line-height:.88;color:var(--red);font-weight:950;letter-spacing:-.09em}
+    .agent h2{font-size:48px;line-height:1.24;margin:0;color:#0d1c2c;letter-spacing:-.055em}
+    .agent .hash{font-size:25px;color:var(--blue2);font-weight:850;margin:21px 0 0;letter-spacing:-.03em}
+    .pain{margin-top:66px;background:#fff3f3;border:1px solid #ffd7d9;padding:40px 44px;display:flex;gap:25px;align-items:center}
+    .pain .badge{background:var(--red);color:#fff;font-size:15px;font-weight:900;letter-spacing:.12em;padding:10px 12px}
+    .pain strong{font-size:31px;letter-spacing:-.04em}
+    .agent-body{margin:54px 0 0;font-size:26px;line-height:1.95;letter-spacing:-.026em;color:#344255}
+
+    .flow{margin-top:76px;background:#07111f;padding:54px 42px;color:#fff;box-shadow:0 26px 54px rgba(9,26,43,.17)}
+    .flow-title{font-size:16px;letter-spacing:.15em;color:#91a9ba;font-weight:900;margin-bottom:35px}
+    .flow-row{display:grid;grid-template-columns:1fr 62px 1fr;gap:18px;align-items:center}
+    .flow-card{min-height:260px;padding:34px 30px;background:#0e2134;border:1px solid #213d55;position:relative}
+    .flow-card.after{background:linear-gradient(145deg,#0d3149,#0b2033);border-color:#1b81b2}
+    .flow-card .cap{font-size:14px;letter-spacing:.13em;font-weight:900;color:#879aaa}
+    .flow-card.after .cap{color:#52d0ff}
+    .flow-card h3{font-size:29px;line-height:1.3;margin:20px 0 25px;letter-spacing:-.04em}
+    .flow-card ul{margin:0;padding:0;list-style:none;color:#b6c5d0;font-size:18px;line-height:1.85}
+    .flow-card li:before{content:"—";color:#68859a;margin-right:10px}
+    .flow-arrow{text-align:center;font-size:40px;color:var(--red);font-weight:900}
+    .closing{height:340px;background:#eaf1f6;display:flex;align-items:center;justify-content:space-between;padding:0 84px;border-top:1px solid #d9e4eb}
+    .closing .left{font-size:17px;letter-spacing:.14em;font-weight:900;color:#536679}
+    .closing .right{text-align:right;font-size:25px;line-height:1.5;font-weight:800;color:#1f3348}
+    .closing .right span{color:var(--red)}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="edition"><span class="line"></span><span>현장르포</span><span class="special">AX SPECIAL</span></div>
+        <div class="hero-copy">
+          <div class="kicker">MANUFACTURING × AI AGENT</div>
+          <h1><span class="accent">120분</span>이<br>1분으로</h1>
+          <div class="subtitle">AI Agent가 바꾼<br>폴란드 제조 현장</div>
+          <div class="time-chip"><strong>120 MIN</strong><span class="arrow">→</span><strong>1 MIN</strong></div>
+        </div>
+      </div>
+      <div class="scroll-cue">FIELD REPORT 2026</div>
+    </section>
+
+    <section class="intro-wrap">
+      <div class="intro-card">
+        <div class="tag">EDITOR'S NOTE</div>
+        <p>제조DX 그룹은 현재 AX핵심 과제를 선제적으로 수행하고 있습니다. 제조운영 조직에서는 생산성 50% 향상을 목표로 AI Agent 유형 16개, 핵심 과제 33개를 도출했고, 이 중 4개의 Agent를 먼저 생산 현장에 적용하며 첫 결실을 맺었습니다. 적용된 곳은 폴란드 브로츠와프 법인이었는데요. 올해 7~8월 순차적으로 현장에 투입한 결과, 반복 업무는 줄고 의사결정 속도가 빨라지는 변화를 확인할 수 있었습니다. 폴란드 제조 현장을 바꾼 AI Agent의 전과 후를 SABO가 취재했습니다.</p>
+        <div class="editor-note"><span>—</span>빌리지 편집자 주</div>
+      </div>
+    </section>
+
+    <section class="video-section">
+      <div class="section-head">
+        <div><div class="section-no">WATCH THE FIELD</div><div class="section-label">폴란드 제조 현장, 영상으로 보기</div></div>
+        <div class="section-no">PLAY FILM ↗</div>
+      </div>
+      <div class="video">
+        <div class="play"></div>
+        <div class="video-title">AI Agent가 바꾼 WA 법인의 하루</div>
+        <div class="video-time">VIDEO</div>
+      </div>
+    </section>
+
+    <section class="why">
+      <div class="ghost">PL</div>
+      <div class="eyebrow">01 · Why Poland?</div>
+      <h2>왜 폴란드였을까요?</h2>
+      <p>제조DX그룹 산하 제조운영 AX전략 파트의 심민규 책임은 “현장에서 엔지니어와 기술 인력이 수행하는 수율 분석, 불량 원인 분석, 설비 관리 등의 업무에 많은 시간과 숙련도가 요구되는데, 폴란드 법인에 고숙련·반복 업무가 많아 AI Agent 효과를 가장 빠르게 검증할 수 있는 환경으로 판단했다”고 말합니다.</p>
+      <div class="quote">
+        <p>고숙련·반복 업무가 많은 폴란드 법인은<br>AI Agent의 효과를 가장 빠르게 검증할 수 있는 현장이었습니다.</p>
+        <div class="who">심민규 책임 · 제조운영 AX전략 파트</div>
+      </div>
+    </section>
+
+    <section class="agents-intro">
+      <div class="dot-grid"></div>
+      <div class="copy">
+        <div class="small">4 AI AGENTS · WA PLANT</div>
+        <h2>WA 법인에 적용된<br>AI Agent 총 4개의 과제</h2>
+        <p>생산 현장에 먼저 투입된 Agent를 하나씩 살펴보시죠.</p>
+      </div>
+    </section>
+
+    <section class="agent">
+      <div class="agent-top">
+        <div class="agent-num">1</div>
+        <div>
+          <h2>검사기 PC 관리<br>자율운영 Agent</h2>
+          <div class="hash">#과거엔 알람이 울려야 조치, 이제는 Agent가 먼저!</div>
+        </div>
+      </div>
+
+      <div class="pain"><span class="badge">PAIN POINT</span><strong>PC 때문에 라인이 멈춘다</strong></div>
+      <p class="agent-body">슬리터 공정의 콘트롤 룸. 벽면을 채운 다중 모니터 앞에 앉은 테크니션의 모습이 보입니다. 예전 같으면 하루에도 몇 번씩 소란스러운 상황이 벌어졌을 겁니다. FDC(이상 감지 및 원인 분류) 알람이 뜨면, 테크니션은 문제 PC의 상태 그래프를 확인하고, 전화로 라인의 작업자에게 ‘잠깐 정지해달라(Please Stop)’고 합니다. 그 후 원격 PC 재부팅을 한 뒤 정상화 여부를 지켜보는 일련의 동작이 반복됐습니다.</p>
+
+      <div class="flow">
+        <div class="flow-title">BEFORE → WITH AI AGENT</div>
+        <div class="flow-row">
+          <div class="flow-card">
+            <div class="cap">BEFORE · 사후 대응</div>
+            <h3>알람 후 사람이<br>상태 확인·정지 요청</h3>
+            <ul><li>FDC 알람 확인</li><li>작업자에게 전화</li><li>원격 재부팅·대기</li></ul>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-card after">
+            <div class="cap">AFTER · 선제 대응</div>
+            <h3>Agent가 먼저<br>이상 징후를 감지</h3>
+            <ul><li>PC 상태 상시 모니터링</li><li>선제적 판단 지원</li><li>라인 정지 리스크 감소</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="closing">
+      <div class="left">FIELD REPORT · AX SPECIAL</div>
+      <div class="right">반복은 줄이고,<br><span>의사결정은 더 빠르게.</span></div>
+    </footer>
+  </main>
+</body>
+</html>
