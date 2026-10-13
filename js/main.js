@@ -138,11 +138,12 @@ const sequenceTiming = {
   nextExitEnd: 7.4,
   specialStart: 7.4,
   specialEnd: 8.15,
-  objectFadeEnd: 8.6,
-  specialExitStart: 8.65,
-  specialExitEnd: 9.15,
-  insideStart: 9.2,
-  insideEnd: 10.2,
+  // SPECIAL 완전 등장 이후 INSIDE 진입까지의 거리를 기존의 70%로 압축합니다.
+  objectFadeEnd: 8.465,
+  specialExitStart: 8.5,
+  specialExitEnd: 8.85,
+  insideStart: 8.885,
+  insideEnd: 9.585,
 };
 
 const clamp = (value, min = 0, max = 1) => Math.min(max, Math.max(min, value));

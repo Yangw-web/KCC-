@@ -273,8 +273,9 @@ a {
 /* 두 문장과 SPECIAL까지 하나의 고정 화면에서 연결합니다. */
 .scroll-sequence {
   position: relative;
-  height: 1120vh;
-  height: 1120svh;
+  /* JS의 insideEnd(9.585) + 고정 화면 높이(1)에 맞춰 전환 거리를 줄입니다. */
+  height: 1058.5vh;
+  height: 1058.5svh;
   background: #000;
 }
 
