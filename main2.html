@@ -11,7 +11,7 @@
   </head>
   <body class="main2-page">
     <header class="site-header" data-header>
-      <a class="brand" href="#hero" aria-label="KCC Webzine 홈">
+      <a class="brand" href="./index.html" aria-label="KCC Webzine 메인 1로 이동">
         <img
           class="brand__logo"
           src="./assets/kcc-webzine-logo.png"
@@ -38,7 +38,7 @@
         <a href="#special">SPECIAL</a>
         <a href="#inside">INSIDE</a>
         <a href="#outside">OUTSIDE</a>
-        <a href="./index.html#news">NEWS</a>
+        <a href="#news">NEWS</a>
         <a href="#event">EVENT</a>
       </nav>
 
@@ -169,8 +169,37 @@
           </a>
         </div>
       </section>
-      <!-- 다음 콘텐츠는 이 위치에 이어서 추가합니다. -->
+      <section class="main2-news" id="news" aria-labelledby="main2-news-heading">
+        <h2 id="main2-news-heading"><img src="./assets/main2-news-title.png" width="145" height="47" alt="NEWS" /></h2>
+        <!-- 뉴스의 제목·태그·이동 주소는 각 카드에서 수정하세요. -->
+        <div class="main2-news__grid">
+          <a class="main2-story" href="#">
+            <div class="main2-story__thumbnail main2-news__thumbnail"><img src="./assets/main2-n-th-1.png" width="397" height="260" alt="서울색 모닝옐로우 표준 색상집" loading="lazy" /></div>
+            <h3>서울색 ‘모닝옐로우’ 표준 색상집 발간</h3>
+            <div class="main2-story__tags"><span>#KCC</span></div>
+          </a>
+          <a class="main2-story" href="#">
+            <div class="main2-story__thumbnail main2-news__thumbnail"><img src="./assets/main2-n-th-2.png" width="397" height="260" alt="비센티 인테리어필름으로 꾸민 거실" loading="lazy" /></div>
+            <h3>‘비센티 인테리어필름’ 리뉴얼 출시</h3>
+            <div class="main2-story__tags"><span>#KCC글라스 홈씨씨</span></div>
+          </a>
+          <a class="main2-story" href="#">
+            <div class="main2-story__thumbnail main2-news__thumbnail"><img src="./assets/main2-n-th-3.png" width="397" height="260" alt="NYSCC Supplier’s Day 2026 전시 부스" loading="lazy" /></div>
+            <h3>NYSCC Supplier’s Day 2026 참가</h3>
+            <div class="main2-story__tags"><span>#KCC실리콘</span></div>
+          </a>
+          <a class="main2-story" href="#">
+            <div class="main2-story__thumbnail main2-news__thumbnail"><img src="./assets/main2-n-th-4.png" width="397" height="260" alt="안전모를 쓰고 유리 품질을 확인하는 작업자들" loading="lazy" /></div>
+            <h3>업계 최초 ‘정품 유리 인증 제도’ 도입</h3>
+            <div class="main2-story__tags"><span>#KCC글라스</span></div>
+          </a>
+        </div>
+      </section>
     </main>
+    <button class="back-to-top main2-top" type="button" aria-label="맨 위로 이동" data-main2-top hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V3m-8 8 8-8 8 8" /></svg>
+      <span>TOP</span>
+    </button>
     <footer class="site-footer" data-footer>
       <div class="site-footer__top">
         <div class="site-footer__inner site-footer__top-inner">

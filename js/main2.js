@@ -5,6 +5,7 @@ const menuToggle = document.querySelector('[data-menu-toggle]');
 const hero = document.querySelector('.main2-hero');
 const video = document.querySelector('[data-main2-video]');
 const fallback = document.querySelector('[data-main2-fallback]');
+const topButton = document.querySelector('[data-main2-top]');
 
 function setMenu(open) {
   menu.classList.toggle('is-open', open);
@@ -22,7 +23,11 @@ function updateHeader() {
   header.classList.toggle('is-light', light);
   header.classList.toggle('is-scrolled', light);
   header.style.setProperty('--light-progress', light ? 1 : 0);
+  topButton.hidden = window.scrollY < window.innerHeight * 0.4;
 }
+topButton.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+});
 window.addEventListener('scroll', updateHeader, { passive: true });
 window.addEventListener('resize', updateHeader);
 window.addEventListener('pageshow', updateHeader);
