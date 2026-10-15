@@ -137,10 +137,12 @@ function hideTerm() {
   clearTimeout(termDismissTimer);
   activeTerm?.removeAttribute('aria-describedby');
   activeTerm = null;
+  tooltip.classList.toggle('is-visible', false);
   tooltip.hidden = true;
 }
 function showTerm(term) {
   clearTimeout(termDismissTimer);
+  if (activeTerm !== term) tooltip.classList.toggle('is-visible', false);
   activeTerm?.removeAttribute('aria-describedby');
   activeTerm = term;
   term.setAttribute('aria-describedby', tooltip.id);
@@ -153,8 +155,10 @@ function showTerm(term) {
   const above = rect.bottom + bubble.height + 24 > window.innerHeight && rect.top > bubble.height + 24;
   tooltip.classList.toggle('is-above', above);
   tooltip.style.left = `${left}px`;
-  tooltip.style.top = `${above ? rect.top - bubble.height - 14 : rect.bottom + 14}px`;
+  tooltip.style.top = `${above ? rect.top - bubble.height - 11.2 : rect.bottom + 11.2}px`;
   tooltip.style.setProperty('--tooltip-arrow', `${Math.max(18, Math.min(bubble.width - 18, center - left))}px`);
+  // 크기 측정으로 초기 opacity: 0을 확정한 뒤 0.3초 동안 나타나게 합니다.
+  tooltip.classList.toggle('is-visible', true);
 }
 function scheduleTermDismiss() { termDismissTimer = window.setTimeout(hideTerm, 140); }
 document.querySelectorAll('[data-term]').forEach((term) => {
