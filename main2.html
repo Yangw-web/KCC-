@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="KCC Webzine 새로운 메인 시안" />
+    <title>KCC Webzine — 메인 시안 2</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main2.css" />
+    <script src="./js/main2.js" defer></script>
+  </head>
+  <body class="main2-page">
+    <header class="site-header" data-header>
+      <a class="brand" href="#hero" aria-label="KCC Webzine 홈">
+        <img
+          class="brand__logo"
+          src="./assets/kcc-webzine-logo.png"
+          alt="KCC Webzine"
+          width="398"
+          height="92"
+        />
+        <img class="brand__logo brand__logo--light" src="./assets/logo2.png" alt="" width="398" height="92" aria-hidden="true" />
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="메뉴 열기"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+        data-menu-toggle
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-navigation" aria-label="주요 메뉴" data-menu>
+        <a href="#special">SPECIAL</a>
+        <a href="#inside">INSIDE</a>
+        <a href="#outside">OUTSIDE</a>
+        <a href="./index.html#news">NEWS</a>
+        <a href="#event">EVENT</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button notification-button" type="button" aria-label="알림">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4" />
+          </svg>
+          <span class="notification-dot"></span>
+        </button>
+        <button class="icon-button search-button" type="button" aria-label="검색">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="10.8" cy="10.8" r="7.3" />
+            <path d="m16.2 16.2 5 5" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="main2-hero" id="hero" aria-label="KCC Webzine 메인 영상">
+        <h1 class="visually-hidden">KCC Webzine</h1>
+        <video class="main2-hero__video" autoplay muted loop playsinline preload="auto" data-main2-video>
+          <source src="./assets/main2-web.mp4" type="video/mp4" />
+        </video>
+        <p class="main2-hero__fallback" role="status" hidden data-main2-fallback>배경 영상을 불러오지 못했습니다.</p>
+      </section>
+      <section class="main2-event" id="event" aria-label="KCC인 AI 라이프 진단">
+        <div class="main2-event__graphic">
+          <img class="main2-event__art" src="./assets/event-main2.png" width="748" height="231" alt="KCC인 AI 라이프 진단. 동료 AI에게 반말 VS 존댓말. 반말파 47%, 존댓말파 53%." />
+          <img class="main2-event__gauge" src="./assets/event-main2-gauge.gif" width="1080" height="134" alt="" aria-hidden="true" />
+        </div>
+      </section>
+      <section class="main2-special" id="special" aria-labelledby="main2-special-heading">
+        <h2 id="main2-special-heading"><img src="./assets/main2-special-title.png" width="203" height="47" alt="SPECIAL" /></h2>
+        <!-- 카드의 제목·설명은 여기에서, 이동 주소는 href에서 수정하세요. -->
+        <div class="main2-special__grid">
+          <a class="main2-special__card" href="#" aria-label="1%의 힘: 안목을 훔쳐라">
+            <img class="main2-special__photo" src="./assets/main2-s-th-1.png" width="390" height="514" alt="은색 구체가 놓인 콘크리트 계단" loading="lazy" />
+            <h3 class="main2-special__title">안목을<br />훔쳐라</h3>
+            <div class="main2-special__detail">
+              <span class="main2-special__category">1%의 힘</span>
+              <p>AI 시대를 사는<br />휴먼</p>
+              <p>한 끗의 차이를<br />만들다!</p>
+            </div>
+            <span class="main2-special__more" aria-hidden="true"></span>
+          </a>
+          <a class="main2-special__card" href="#" aria-label="KCC MASTER: SAMRT CASE">
+            <img class="main2-special__photo" src="./assets/main2-s-th-2.png" width="390" height="514" alt="밝게 웃고 있는 KCC 구성원" loading="lazy" />
+            <h3 class="main2-special__title">SAMRT<br />CASE</h3>
+            <div class="main2-special__detail">
+              <span class="main2-special__category">KCC MASTER</span>
+              <p>AI 시대를 사는<br />휴먼</p>
+              <p>한 끗의 차이를<br />만들다!</p>
+            </div>
+            <span class="main2-special__more" aria-hidden="true"></span>
+          </a>
+          <a class="main2-special__card" href="#" aria-label="AI X파일: AI? 매일 쓰는 중">
+            <img class="main2-special__photo" src="./assets/main2-s-th-3.png" width="390" height="514" alt="여러 겹으로 펼쳐진 컬러 이미지" loading="lazy" />
+            <span class="main2-special__event">EVENT</span>
+            <h3 class="main2-special__title">AI?<br />매일<br />쓰는 중</h3>
+            <div class="main2-special__detail">
+              <span class="main2-special__category">AI X파일</span>
+              <p>K-LUSTER로<br />업무 디테일 UP</p>
+              <p>김 프로의<br />실전 사용법</p>
+            </div>
+            <span class="main2-special__more" aria-hidden="true"></span>
+          </a>
+        </div>
+      </section>
+      <section class="main2-stories" id="inside" aria-labelledby="main2-inside-heading">
+        <h2 id="main2-inside-heading"><img src="./assets/main2-inside-title.png" alt="INSIDE" /></h2>
+        <!-- 썸네일·코너명·제목·태그·href는 각 카드에서 직접 수정할 수 있습니다. -->
+        <div class="main2-stories__grid">
+          <a class="main2-story" href="#">
+            <div class="main2-story__thumbnail">
+              <img src="./assets/main2-i-th-1.png" width="399" height="255" alt="공장에서 안전모를 쓰고 인사하는 케비" loading="lazy" />
+              <span class="main2-story__category">케비의 은밀한 출장</span>
+            </div>
+            <h3>손톱만 한 케비가 잠입했다</h3>
+            <div class="main2-story__tags"><span>#KCC 울산공장</span><span>#자동차도료</span></div>
+          </a>
+          <a class="main2-story" href="#">
+            <div class="main2-story__thumbnail">
+              <img src="./assets/main2-i-th-2.png" width="399" height="255" alt="건물 앞에 함께 서 있는 KCC 팀원들" loading="lazy" />
+              <span class="main2-story__category">팀캐를 찾아라</span>
+            </div>
+            <h3>숫자 속에서 답을 찾고, 방향을 설계하다</h3>
+            <div class="main2-story__tags"><span>#팀캐 부엉이</span><span>#자동차도료</span></div>
+          </a>
+          <a class="main2-story" href="#">
+            <div class="main2-story__thumbnail">
+              <img src="./assets/main2-i-th-3.png" width="399" height="255" alt="욕실을 배경으로 놓인 KCC 실란트 제품" loading="lazy" />
+              <span class="main2-story__category">아몰따 KCC</span>
+            </div>
+            <h3>알고, 묻고, 따져보는 KCC 제품</h3>
+            <div class="main2-story__tags"><span>#KCC 코레실</span><span>#웹툰</span></div>
+          </a>
+        </div>
+      </section>
+
+      <section class="main2-stories main2-stories--outside" id="outside" aria-labelledby="main2-outside-heading">
+        <h2 id="main2-outside-heading"><img src="./assets/main2-outside-title.png" alt="OUTSIDE" /></h2>
+        <div class="main2-stories__grid">
+          <a class="main2-story" href="#">
+            <div class="main2-story__thumbnail">
+              <img src="./assets/main2-o-th-1.png" width="399" height="255" alt="노란 의자와 따뜻한 색감으로 꾸민 거실" loading="lazy" />
+              <span class="main2-story__category">ROOM SOS</span>
+            </div>
+            <h3>크리에이터와 KCC가 제안한 맞춤<br />인테리어 솔루션</h3>
+            <div class="main2-story__tags"><span>#KCC 인테리어</span><span>#크리에이터</span></div>
+          </a>
+          <a class="main2-story" href="#">
+            <div class="main2-story__thumbnail">
+              <img src="./assets/main2-o-th-2.png" width="399" height="255" alt="금속 수납장과 유리 책상이 놓인 작업 공간" loading="lazy" />
+              <span class="main2-story__category">VS 추구미</span>
+            </div>
+            <h3>KCC인 AI 라이프 진단<br />동료 AI에게 반말 VS 존댓말</h3>
+            <div class="main2-story__tags"><span>#AI 라이프 진단</span><span>#반말 VS 존댓말</span></div>
+          </a>
+          <a class="main2-story" href="#">
+            <div class="main2-story__thumbnail">
+              <img src="./assets/main2-o-th-3.png" width="399" height="255" alt="빛과 그림자가 드리운 콘크리트 계단" loading="lazy" />
+              <span class="main2-story__category">재료의 인문학</span>
+            </div>
+            <h3>페인트가 도시의 분위기를<br />바꾼 순간들</h3>
+            <div class="main2-story__tags"><span>#KCC 코레실</span><span>#웹툰</span></div>
+          </a>
+        </div>
+      </section>
+      <!-- 다음 콘텐츠는 이 위치에 이어서 추가합니다. -->
+    </main>
+    <footer class="site-footer" data-footer>
+      <div class="site-footer__top">
+        <div class="site-footer__inner site-footer__top-inner">
+          <a class="site-footer__brand" href="#hero" aria-label="KCC Webzine 홈"><img src="./assets/f_logo_1.png" width="74" height="46" alt="KCC" /></a>
+          <!-- SNS와 개인정보처리방침의 #을 실제 이동 주소로 교체하세요. -->
+          <nav class="site-footer__socials" aria-label="KCC 소셜 미디어">
+            <a href="#" aria-label="KCC 유튜브"><img src="./assets/f_icon_1.png" width="36" height="35" alt="" /></a>
+            <a href="#" aria-label="KCC 블로그"><img src="./assets/f_icon_2.png" width="36" height="35" alt="" /></a>
+            <a href="#" aria-label="KCC 페이스북"><img src="./assets/f_icon_3.png" width="36" height="35" alt="" /></a>
+            <a class="site-footer__instagram" href="#" aria-label="KCC 인스타그램 kccworld"><img src="./assets/f_icon_4.png" width="36" height="35" alt="" /><span>@kccworld</span></a>
+            <a class="site-footer__instagram" href="#" aria-label="SUPRO 인스타그램 supro_kcc"><img src="./assets/f_icon_4.png" width="36" height="35" alt="" /><span>@supro_kcc</span></a>
+            <a class="site-footer__instagram" href="#" aria-label="KLENZE 인스타그램 klenze_"><img src="./assets/f_icon_4.png" width="36" height="35" alt="" /><span>@klenze_</span></a>
+          </nav>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <div class="site-footer__inner site-footer__bottom-inner">
+          <div class="site-footer__info">
+            <a class="site-footer__privacy" href="#">개인정보처리방침</a>
+            <span>서울특별시 서초구 사평대로 344</span>
+            <a href="tel:0800228200">고객상담실 080-022-8200</a>
+            <a href="tel:0234805000">대표번호 02-3480-5000</a>
+          </div>
+          <p class="site-footer__copyright">COPYRIGHT (C) 2022 KCC CORPORATION.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
