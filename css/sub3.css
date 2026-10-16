@@ -1,0 +1,32 @@
+/* Shared article/header/footer styles stay in sub1.css; all changes are scoped here. */
+/* Hero dimensions, live text, tools and responsive layout use the shared article styles. */
+.ai-story { padding: 104px 24px 240px; overflow: clip; }
+.ai-story__intro { padding: 32px 42px; margin-bottom: 120px; background: #f5f5fa; font-size: 20px; font-weight: 500; line-height: 1.75; }
+.ai-story__chapter { position: relative; isolation: isolate; width: min(100%, 1240px); margin: 0 auto 72px; }
+.ai-story__chapter:last-child { margin-bottom: 0; }
+.ai-story__card { display: block; width: 100%; height: auto; }
+.ai-story__decoration { position: absolute; z-index: -1; max-width: none; height: auto; pointer-events: none; }
+.ai-story__chapter--blue .ai-story__decoration { width: 138%; top: -24px; left: -22%; }
+.ai-story__chapter--green .ai-story__decoration { width: 147%; top: 11%; left: -22%; }
+.ai-story__chapter--purple .ai-story__decoration { width: 129%; top: 12%; left: -19%; }
+.ai-event { background: #367ef0; }
+.ai-event img { display: block; width: 100%; height: auto; }
+.ai-page .article-comments { border-top: 1px solid #ddd; }
+.ai-page .article-discover { border-bottom: 0; }
+.ai-page .article-discover__grid img { display: block; width: 100%; height: auto; aspect-ratio: 326 / 212; object-fit: cover; border-radius: 10px; }
+.ai-page .article-discover h3 { margin-top: 10px; }
+@media (max-width: 1100px) {
+  .ai-story { padding-bottom: 130px; }
+  .ai-story__intro { margin-bottom: 85px; }
+}
+@media (max-width: 820px) {
+  .ai-story { padding: 60px 18px 90px; }
+  .ai-story__intro { padding: 25px; margin-bottom: 65px; font-size: 17px; }
+  .ai-story__chapter { margin-bottom: 42px; }
+  .ai-story__decoration { opacity: .65; }
+}
+@media (max-width: 540px) {
+  .ai-story { padding: 45px 12px 65px; }
+  .ai-story__intro { width: calc(100% - 12px); padding: 22px; font-size: 16px; margin-bottom: 50px; }
+  .ai-story__chapter { margin-bottom: 30px; }
+}
