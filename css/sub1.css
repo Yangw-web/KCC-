@@ -121,6 +121,7 @@ html:has(.article-page) { background: #fff; color-scheme: light; scroll-behavior
 .article-discover h2, .article-comments h2 { margin: 0 0 26px; font-size: 34px; font-weight: 750; line-height: 1.3; letter-spacing: -0.025em; }
 .article-discover__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .article-discover__placeholder { aspect-ratio: 327 / 212; border-radius: 9px; background: #000; }
+.article-discover__image { display: block; width: 100%; height: auto; aspect-ratio: 326 / 212; object-fit: cover; border-radius: 9px; }
 .article-discover h3 { margin: 12px 0 2px; font-size: 17px; font-weight: 700; line-height: 1.4; letter-spacing: -0.035em; }
 .article-discover p { font-size: 15px; line-height: 1.5; letter-spacing: -0.04em; }
 .article-comments { padding: 72px 24px 120px; }
