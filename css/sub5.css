@@ -1,0 +1,69 @@
+/* Header, hero text/tools, feedback, comments and footer use sub1.css. */
+.room-story { padding-top: 104px; overflow: clip; }
+.room-intro { width: min(calc(100% - 48px), 1020px); padding: 32px 42px; background: #f5f5fa; font-size: 20px; font-weight: 500; line-height: 1.75; }
+.room-video { width: min(calc(100% - 48px), 1240px); margin: 64px auto 148px; }
+.room-video img { display: block; width: 100%; height: auto; border-radius: 9px; }
+.room-case__copy { width: min(calc(100% - 48px), 1020px); }
+.room-case__heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; padding-bottom: 8px; border-bottom: 1px solid #bbb; }
+.room-case__heading h2 { flex-shrink: 0; margin: 0; }
+.room-case__heading h2 img { display: block; width: 169px; height: 41px; }
+.room-case__heading p { padding-bottom: 3px; font-size: 14px; line-height: 1.5; text-align: right; }
+.room-case h3 { margin: 24px 0 4px; }
+.room-case h3 img { display: block; width: auto; max-width: 100%; height: auto; }
+.room-case__profile { font-weight: 700; }
+.room-case__visual { width: min(100%, 1556px); margin: 42px auto 0; }
+.room-case__visual img { display: block; width: 100%; height: auto; }
+.room-case--second { padding-top: 148px; border-top: 1px solid #ddd; }
+.room-notes { padding: 85px 24px 65px; background: #fff6ed; }
+.room-notes__question { padding-bottom: 55px; border-bottom: 1px solid #ccc; margin-bottom: 45px; }
+.room-notes h2 { margin: 0 0 24px; font-size: 20px; font-weight: 650; line-height: 1.5; }
+.room-notes__question h2 { margin-bottom: 0; }
+.room-notes h2 img { display: block; max-width: 100%; height: auto; }
+.room-notes dl { margin: 0; }
+.room-notes dt { padding-top: 16px; color: #e77885; font-weight: 700; }
+.room-notes dd { margin: 0; padding-bottom: 18px; border-bottom: 1px solid #ccc; }
+.room-resources { padding: 65px 24px 20px; }
+.room-resources h2 { margin: 0 0 28px; }
+.room-resources h2 img { display: block; max-width: 100%; height: auto; }
+.room-resources__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.room-resources__grid > div { padding-bottom: 28px; border-bottom: 1px solid #888; }
+.room-resources__grid img { display: block; width: 100%; height: auto; aspect-ratio: 245 / 188; }
+.room-resources__grid h3 { margin: 20px 0 4px; color: #353b44; font-size: 18px; line-height: 1.5; font-weight: 700; }
+.room-page .article-comments { border-top: 1px solid #ddd; }
+@media (max-width: 1100px) {
+  .room-story { padding-top: 75px; }
+  .room-video { margin-bottom: 95px; }
+  .room-case--second { padding-top: 95px; }
+  .room-resources__grid { gap: 15px; }
+  .room-resources__grid h3 { font-size: 16px; }
+}
+@media (max-width: 820px) {
+  .room-story { padding-top: 55px; }
+  .room-intro { padding: 25px; font-size: 17px; }
+  .room-video { margin: 40px auto 70px; }
+  .room-case__heading { align-items: start; flex-direction: column; gap: 12px; }
+  .room-case__heading p { text-align: left; font-size: 12px; }
+  .room-case__heading h2 img { width: 135px; height: auto; }
+  .room-case__visual { margin-top: 30px; }
+  .room-case--second { padding-top: 65px; }
+  .room-notes { padding: 50px 24px; }
+  .room-notes__question { padding-bottom: 30px; margin-bottom: 30px; }
+  .room-resources { padding-top: 45px; }
+  .room-resources__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 20px; }
+  .room-resources__grid h3 { font-size: 18px; }
+}
+@media (max-width: 540px) {
+  .room-story { padding-top: 45px; }
+  .room-intro, .room-video, .room-case__copy { width: calc(100% - 36px); }
+  .room-intro { padding: 22px; font-size: 16px; }
+  .room-video { margin-bottom: 55px; }
+  .room-case__copy { font-size: 16px; }
+  .room-case h3 { margin-top: 20px; }
+  .room-case--second { padding-top: 45px; }
+  .room-notes { padding-inline: 18px; }
+  .room-notes h2 { font-size: 18px; }
+  .room-resources { padding-inline: 18px; }
+  .room-resources__grid { gap: 25px 14px; }
+  .room-resources__grid h3 { margin-top: 12px; font-size: 15px; }
+  .room-resources__grid p { font-size: 14px; }
+}

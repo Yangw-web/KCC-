@@ -1,0 +1,59 @@
+/* The shared article stylesheet supplies the hero, navigation and footer. */
+.sealant-story { padding: 0 24px 90px; background: #f6f5f4 url('../assets/sub4_15.jpg') center top / 1920px auto repeat-y; }
+.sealant-story__paper { width: min(100%, 1240px); margin: 0 auto; padding: 100px 130px 48px; background: #fff; }
+.sealant-story__panel { margin: 0 0 110px; text-align: center; }
+.sealant-story__panel img { display: block; width: 100%; height: auto; margin-inline: auto; }
+.sealant-story__panel figcaption { margin: 26px -30px 0; font-size: 24px; font-weight: 650; line-height: 1.55; letter-spacing: -.045em; word-break: keep-all; overflow-wrap: anywhere; }
+.sealant-story__panel strong { font-weight: 800; }
+.sealant-story__panel--ending { margin-bottom: 45px; }
+.sealant-story__panel:last-child { margin-bottom: 0; }
+.sealant-product { padding: 85px 24px 0; }
+.sealant-product__note { position: relative; width: min(100%, 1056px); min-height: 914px; margin-inline: auto; padding: 130px 70px 90px; background: url('../assets/sub4_10.jpg') center / 100% 100% no-repeat; }
+.sealant-product__note dl { margin: 0; font-size: 18px; font-weight: 500; line-height: 1.8; letter-spacing: -.04em; word-break: keep-all; overflow-wrap: anywhere; }
+.sealant-product__note dt { margin-top: 30px; font-weight: 650; }
+.sealant-product__note dt:first-child { margin-top: 0; }
+.sealant-product__note dt::before { content: '▶ '; }
+.sealant-product__note dd { position: relative; margin: 2px 0 0 20px; padding-left: 13px; }
+.sealant-product__note dd::before { content: '-'; position: absolute; left: 0; }
+.sealant-product__note dt:nth-last-of-type(-n+2),
+.sealant-product__note dt:nth-last-of-type(-n+2) ~ dd { max-width: 76%; }
+.sealant-product__character { position: absolute; right: -68px; bottom: -65px; width: 30.5%; height: auto; mix-blend-mode: multiply; }
+.sealant-page .article-feedback { padding-top: 135px; }
+.sealant-page .article-comments { border-top: 1px solid #ddd; }
+.sealant-page .article-discover { border-bottom: 0; }
+.sealant-page .article-discover__grid img { display: block; width: 100%; height: auto; aspect-ratio: 326 / 212; object-fit: cover; border-radius: 10px; }
+@media (max-width: 1250px) {
+  .sealant-story__paper { padding-inline: 9%; }
+  .sealant-product { padding-inline: 60px; }
+  .sealant-product__character { right: -40px; }
+}
+@media (max-width: 820px) {
+  .sealant-story { padding: 0 18px 50px; background-size: 1300px auto; }
+  .sealant-story__paper { padding: 55px 6% 35px; }
+  .sealant-story__panel { margin-bottom: 65px; }
+  .sealant-story__panel figcaption { margin: 20px 0 0; font-size: 19px; }
+  .sealant-story__panel--ending { margin-bottom: 30px; }
+  .sealant-product { padding: 50px 30px 0; }
+  .sealant-product__note { min-height: 0; padding: 100px 40px 180px; }
+  .sealant-product__note dl { font-size: 16px; }
+  .sealant-product__note dt { margin-top: 24px; }
+  .sealant-product__note dt:nth-last-of-type(-n+2),
+  .sealant-product__note dt:nth-last-of-type(-n+2) ~ dd { max-width: none; }
+  .sealant-product__character { width: 160px; right: -15px; bottom: -40px; }
+  .sealant-page .article-feedback { padding-top: 95px; }
+}
+@media (max-width: 540px) {
+  .sealant-story { padding-inline: 12px; padding-bottom: 30px; }
+  .sealant-story__paper { padding: 35px 12px 25px; }
+  .sealant-story__panel { margin-bottom: 45px; }
+  .sealant-story__panel figcaption { margin-top: 14px; font-size: 16px; }
+  .sealant-story__panel figcaption br { display: none; }
+  .sealant-story__panel--ending { margin-bottom: 22px; }
+  .sealant-product { padding: 35px 18px 0; }
+  .sealant-product__note { padding: 30px 26px 150px; border: 3px solid #e57c88; border-radius: 24px; background-color: #faf9e8; background-image: linear-gradient(#dce2c966 1px, transparent 1px), linear-gradient(90deg, #dce2c966 1px, transparent 1px); background-size: 24px 24px; }
+  .sealant-product__note h2 { position: static; width: auto; height: auto; margin: 0 0 24px; padding: 0; overflow: visible; clip-path: none; white-space: normal; color: #143ba6; font-size: 24px; }
+  .sealant-product__note dl { font-size: 15px; }
+  .sealant-product__note dd { margin-left: 10px; }
+  .sealant-product__character { width: 135px; right: -8px; bottom: -25px; }
+  .sealant-page .article-feedback { padding-top: 75px; }
+}
