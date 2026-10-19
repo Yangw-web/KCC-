@@ -10,7 +10,7 @@ for (const match of html.matchAll(/(?:src|href)="\.\/([^"#]+)(?:#[^"]*)?"/g)) {
 const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
 assert.equal(new Set(ids).size, ids.length, 'IDs must be unique');
 assert.equal((html.match(/class="sealant-story__panel/g) || []).length, 8);
-assert.ok(html.indexOf('class="article-comments"') < html.indexOf('class="article-discover"'));
+assert.ok(html.indexOf('class="article-discover"') < html.indexOf('class="article-comments"'));
 assert.ok(html.includes('src="./assets/sub4_1.jpg"'));
 assert.ok(html.includes('<h1 id="article-title">EP.01 욕실 실리콘은 왜 자꾸 까매질까?</h1>'));
 for (let n = 1; n <= 15; n++) {

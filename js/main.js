@@ -416,11 +416,8 @@ function scrollToSpecial() {
     behavior: reduceMotion.matches ? "auto" : "smooth",
   });
 }
-menu.querySelector('a[href="#special"]').addEventListener("click", (event) => {
-  event.preventDefault();
-  history.replaceState(null, "", "#special");
-  scrollToSpecial();
-});
+// The header SPECIAL link now opens arc1.html. Do not bind the removed #special link;
+// initialization must continue immediately to buildSlides(). Keep direct hash navigation below.
 window.addEventListener("hashchange", () => {
   if (window.location.hash === "#special") scrollToSpecial();
 });

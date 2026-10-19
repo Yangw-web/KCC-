@@ -11,7 +11,7 @@ const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
 assert.equal(new Set(ids).size, ids.length, 'IDs must be unique');
 assert.equal((html.match(/class="ai-story__card"/g) || []).length, 3);
 assert.equal((html.match(/class="ai-story__decoration"/g) || []).length, 3);
-assert.ok(html.indexOf('class="article-comments"') < html.indexOf('class="article-discover"'));
+assert.ok(html.indexOf('class="article-discover"') < html.indexOf('class="article-comments"'));
 for (const file of ['sub3_1.png', 'sub3_2.png', 'sub3_3.png']) {
   const png = fs.readFileSync(path.join(root, 'assets', file));
   assert.equal(png.readUInt32BE(16), 1240);

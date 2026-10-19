@@ -23,6 +23,7 @@ for (let n = 1; n <= 3; n++) assert.ok(html.includes('sub6_ani' + n + '.gif'));
 for (const match of css.matchAll(/url\('([^']+)'\)/g)) assert.ok(fs.existsSync(path.resolve(root, 'css', match[1])));
 assert.ok(html.includes('src="./assets/sub6_1_1.jpg"'));
 assert.ok(html.includes('class="article-discover"'));
+assert.ok(html.indexOf('class="article-discover"') < html.indexOf('class="article-comments"'));
 assert.equal((html.match(/class="team-graph__label team-graph__label--/g) || []).length, 6);
 assert.equal((css.match(/{/g) || []).length, (css.match(/}/g) || []).length);
 const reference = fs.readFileSync(path.join(root, 'sub4.html'), 'utf8');

@@ -38,8 +38,8 @@
       </button>
 
       <nav class="primary-nav" id="primary-navigation" aria-label="주요 메뉴" data-menu>
-        <a href="#special">SPECIAL</a>
-        <a href="#inside">INSIDE</a>
+        <a href="./arc1.html">SPECIAL</a>
+        <a href="./arc2.html">INSIDE</a>
         <a href="#outside">OUTSIDE</a>
         <a href="#news">NEWS</a>
         <a href="#event">EVENT</a>
@@ -117,7 +117,7 @@
           preload="auto"
           data-hero-video
         >
-          <source src="./assets/main_back.mov" type="video/mp4" />
+          <source src="./assets/main_back.mp4" type="video/mp4" />
         </video>
         <div class="hero__shade" aria-hidden="true"></div>
 
@@ -167,9 +167,9 @@
         <section class="special" id="special" aria-labelledby="special-heading" data-special inert>
           <div class="special__header">
             <h2 id="special-heading"><img src="./assets/spl.png" width="325" height="95" alt="SPECIAL" /></h2>
-            <button class="special__more" type="button" aria-label="SPECIAL 목차 (준비 중)">
+            <a class="special__more" href="./arc1.html" aria-label="SPECIAL 목차로 이동">
               <span aria-hidden="true"></span>
-            </button>
+            </a>
           </div>
           <div class="special__carousel" role="region" aria-roledescription="캐러셀" aria-label="SPECIAL 칼럼" tabindex="0" data-carousel>
             <div class="special__slides" data-slides></div>
@@ -177,10 +177,10 @@
             <template data-slide-template>
               <article class="special__card">
                 <a class="special__thumbnail" href="#">
-                  <img src="./assets/spl_th_1.png" alt="클라이밍장에서 함께하는 두 사람" width="728" height="512" draggable="false" />
+                  <img src="./assets/spl_th_fixed2.png" alt="안경을 쓰고 밝게 웃는 KCC 구성원" width="728" height="512" draggable="false" />
                   <div class="special__overlay">
-                    <h4>손톱만 한 케비가 잠입했다</h4>
-                    <p>AI가 수많은 답을 내놓는 시대에 인간의 한 끗 차이가 중요함을 이야기하는 코너. AI 시대에 인간의 판단력이 중요해지는 산업·문화 트렌드.</p>
+                    <h4>취향을 일로 만든 사람의 특별한 루틴</h4>
+                    <p>좋아하는 일을 오래 이어가는 사람에게는 자신만의 기준과 루틴이 있습니다. 일상의 작은 습관에서 취향을 전문성으로 쌓아가는 KCC인의 이야기를 만나봅니다.</p>
                     <span class="special__detail">자세히 보기</span>
                   </div>
                 </a>
@@ -189,24 +189,24 @@
             </template>
             <template data-slide-template>
               <article class="special__card">
-                <a class="special__thumbnail" href="#">
-                  <img src="./assets/spl_th_2.png" alt="파랑, 흰색, 주황색 페인트의 물결" width="728" height="512" draggable="false" />
+                <a class="special__thumbnail" href="./sub3.html">
+                  <img src="./assets/spl_th_fixed3.png" alt="다채로운 이미지가 담긴 폴더가 여러 겹으로 펼쳐진 모습" width="728" height="512" draggable="false" />
                   <div class="special__overlay">
-                    <h4>손톱만 한 케비가 잠입했다</h4>
-                    <p>AI가 수많은 답을 내놓는 시대에 인간의 한 끗 차이가 중요함을 이야기하는 코너. AI 시대에 인간의 판단력이 중요해지는 산업·문화 트렌드.</p>
+                    <h4>일 잘하는 사람들의 AI 도구 활용법</h4>
+                    <p>반복되는 일은 가볍게, 중요한 판단은 더 깊게. 업무의 흐름을 바꾸는 AI 활용법과 직접 써보며 발견한 노하우를 통해 나에게 맞는 일하는 방식을 찾아봅니다.</p>
                     <span class="special__detail">자세히 보기</span>
                   </div>
                 </a>
-                <h3>KCC MASTER</h3>
+                <h3>AI X파일</h3>
               </article>
             </template>
             <template data-slide-template>
               <article class="special__card">
-                <a class="special__thumbnail" href="#">
-                  <img src="./assets/spl_th_3.png" alt="KCC 공장의 안전모를 쓴 비버 캐릭터" width="728" height="512" draggable="false" />
+                <a class="special__thumbnail" href="./sub2.html">
+                  <img src="./assets/spl_th_fixed1.png" alt="빛이 비치는 콘크리트 계단 위에 놓인 은색 구체들" width="728" height="512" draggable="false" />
                   <div class="special__overlay">
-                    <h4>손톱만 한 케비가 잠입했다</h4>
-                    <p>AI가 수많은 답을 내놓는 시대에 인간의 한 끗 차이가 중요함을 이야기하는 코너. AI 시대에 인간의 판단력이 중요해지는 산업·문화 트렌드.</p>
+                    <h4>AI 시대를 사는 휴먼, 한 끗의 차이를 만든다!</h4>
+                    <p>같은 공간과 결과물에서도 새로운 가능성을 발견하는 눈. 경험과 관찰이 쌓여 만들어지는 안목을 따라, AI 시대에도 빛나는 인간의 판단력과 한 끗의 차이를 들여다봅니다.</p>
                     <span class="special__detail">자세히 보기</span>
                   </div>
                 </a>
@@ -229,7 +229,7 @@
         <div class="inside__inner">
           <div class="inside__header">
             <h2 id="inside-heading"><img src="./assets/inti_1.png" alt="INSIDE" width="243" height="94" /></h2>
-            <button class="special__more inside__more" type="button" aria-label="INSIDE 목차 (준비 중)"><span aria-hidden="true"></span></button>
+            <a class="special__more inside__more" href="./arc2.html" aria-label="INSIDE 목차로 이동"><span aria-hidden="true"></span></a>
           </div>
           <!-- 제목, 설명, href는 각 카드에서 직접 수정할 수 있습니다. -->
           <div class="inside__grid">
@@ -238,40 +238,40 @@
                 <img src="./assets/in_th_1.png" width="606" height="384" alt="안전화 끈을 타고 올라가는 케비" loading="lazy" />
                 <div class="special__overlay inside__overlay">
                   <h4>손톱만 한 케비가 잠입했다</h4>
-                  <p>AI가 수많은 답을 내놓는 시대에 인간의 한 끗 차이가 중요함을 이야기하는 코너. AI 시대에 인간의 판단력이 중요해지는 산업·문화 트렌드.</p>
+                  <p>손톱만 한 케비의 눈으로 KCC 생산 현장을 구석구석 살펴봅니다. 익숙한 제품이 완성되기까지 숨어 있는 공정과 기술, 현장을 움직이는 사람들의 이야기를 만나봅니다.</p>
                   <span class="special__detail">자세히 보기</span>
                 </div>
               </a>
               <h3><a href="./sub1.html">케비의 은밀한 출장</a></h3>
             </article>
             <article class="inside__card">
-              <a class="special__thumbnail inside__thumbnail" href="#">
-                <img src="./assets/in_th_2.png" width="606" height="384" alt="함께 모여 이야기를 나누는 KCC 팀원들" loading="lazy" />
+              <a class="special__thumbnail inside__thumbnail" href="./sub6.html">
+                <img src="./assets/spl_th_fixed4.png" width="606" height="427" alt="건물 앞에 함께 모인 KCC 경영분석팀" loading="lazy" />
                 <div class="special__overlay inside__overlay">
-                  <h4>손톱만 한 케비가 잠입했다</h4>
-                  <p>AI가 수많은 답을 내놓는 시대에 인간의 한 끗 차이가 중요함을 이야기하는 코너. AI 시대에 인간의 판단력이 중요해지는 산업·문화 트렌드.</p>
+                  <h4>숫자 속에서 답을 찾고, 방향을 설계하다</h4>
+                  <p>서로 다른 경험과 전문성이 만나 하나의 팀을 이룹니다. 숫자 너머의 흐름을 읽고 더 나은 방향을 함께 고민하는 경영분석팀의 일과 팀워크, 그들만의 이야기를 소개합니다.</p>
                   <span class="special__detail">자세히 보기</span>
                 </div>
               </a>
               <h3>팀캐를 찾아라!</h3>
             </article>
             <article class="inside__card">
-              <a class="special__thumbnail inside__thumbnail" href="#">
-                <img src="./assets/in_th_3.png" width="606" height="384" alt="요트에서 함께 하트 모양을 만드는 두 사람" loading="lazy" />
+              <a class="special__thumbnail inside__thumbnail" href="./sub4.html">
+                <img src="./assets/spl_th_fixed5.png" width="606" height="427" alt="욕실을 배경으로 놓인 KCC 코레실 제품 3종" loading="lazy" />
                 <div class="special__overlay inside__overlay">
-                  <h4>손톱만 한 케비가 잠입했다</h4>
-                  <p>AI가 수많은 답을 내놓는 시대에 인간의 한 끗 차이가 중요함을 이야기하는 코너. AI 시대에 인간의 판단력이 중요해지는 산업·문화 트렌드.</p>
+                  <h4>알고 쓰면 더 놀라운 KCC 실리콘의 세계</h4>
+                  <p>욕실의 작은 틈부터 생활 속 다양한 공간까지, 알고 보면 가까이에 있는 KCC 실리콘. 익숙해서 지나쳤던 제품의 쓰임과 숨은 기술을 쉽고 재미있는 이야기로 풀어봅니다.</p>
                   <span class="special__detail">자세히 보기</span>
                 </div>
               </a>
-              <h3>아몰따 KCC</h3>
+              <h3>아묻따 KCC</h3>
             </article>
             <article class="inside__card">
               <a class="special__thumbnail inside__thumbnail" href="#">
-                <img src="./assets/in_th_4.png" width="606" height="384" alt="파도 위에서 서핑을 즐기는 두 사람" loading="lazy" />
+                <img src="./assets/spl_th_fixed6.png" width="606" height="427" alt="서핑 보드와 함께 물속에서 미소 짓는 두 사람" loading="lazy" />
                 <div class="special__overlay inside__overlay">
-                  <h4>손톱만 한 케비가 잠입했다</h4>
-                  <p>AI가 수많은 답을 내놓는 시대에 인간의 한 끗 차이가 중요함을 이야기하는 코너. AI 시대에 인간의 판단력이 중요해지는 산업·문화 트렌드.</p>
+                  <h4>일하기 좋은 회사, 함께 만드는 새로운 활력</h4>
+                  <p>잠시 일상에서 벗어나 함께 웃고 새로운 경험을 나누는 시간. 구성원의 목소리에서 시작해 더 즐거운 일터로 이어지는 우리회사 F5 위원회의 소통과 활력 이야기를 만나봅니다.</p>
                   <span class="special__detail">자세히 보기</span>
                 </div>
               </a>
@@ -290,11 +290,11 @@
           <!-- INSIDE와 공통 카드 스타일을 사용합니다. 제목, 설명, href는 여기서 수정하세요. -->
           <div class="inside__grid">
             <article class="inside__card">
-              <a class="special__thumbnail inside__thumbnail" href="#">
-                <img src="./assets/ou_th_1.png" width="606" height="384" alt="주기율표의 실리콘 원소" loading="lazy" />
+              <a class="special__thumbnail inside__thumbnail" href="./sub5.html">
+                <img src="./assets/spl_th_fixed7.png" width="606" height="427" alt="노란 의자와 그림으로 꾸민 따뜻한 거실" loading="lazy" />
                 <div class="special__overlay inside__overlay">
-                  <h4>손톱만 한 케비가 잠입했다</h4>
-                  <p>AI가 수많은 답을 내놓는 시대에 인간의 한 끗 차이가 중요함을 이야기하는 코너. AI 시대에 인간의 판단력이 중요해지는 산업·문화 트렌드.</p>
+                  <h4>좁고 오래된 집, 나답게 바꾸는 방법</h4>
+                  <p>집 전체를 바꾸지 않아도 일상의 분위기는 달라질 수 있습니다. 크리에이터의 감각과 KCC의 제품·컬러 노하우로 우리 집의 고민을 풀고, 나에게 맞는 공간의 해답을 찾아봅니다.</p>
                   <span class="special__detail">자세히 보기</span>
                 </div>
               </a>
@@ -302,10 +302,10 @@
             </article>
             <article class="inside__card">
               <a class="special__thumbnail inside__thumbnail" href="#">
-                <img src="./assets/ou_th_2.png" width="606" height="384" alt="제품 샘플을 소개하는 두 사람" loading="lazy" />
+                <img src="./assets/spl_th_fixed8.png" width="606" height="427" alt="금속 수납장과 유리 책상이 놓인 작업 공간" loading="lazy" />
                 <div class="special__overlay inside__overlay">
-                  <h4>손톱만 한 케비가 잠입했다</h4>
-                  <p>AI가 수많은 답을 내놓는 시대에 인간의 한 끗 차이가 중요함을 이야기하는 코너. AI 시대에 인간의 판단력이 중요해지는 산업·문화 트렌드.</p>
+                  <h4>같은 공간, 서로 다른 취향의 선택</h4>
+                  <p>깔끔한 정리와 자유로운 배치, 익숙한 편안함과 새로운 자극. 같은 공간을 바라보는 서로 다른 취향을 비교하며, 내가 일하고 쉬는 방식에 어울리는 선택을 함께 고민해봅니다.</p>
                   <span class="special__detail">자세히 보기</span>
                 </div>
               </a>
@@ -313,10 +313,10 @@
             </article>
             <article class="inside__card">
               <a class="special__thumbnail inside__thumbnail" href="#">
-                <img src="./assets/ou_th_3.png" width="606" height="384" alt="주황빛 창문이 빛나는 입체적인 건축 구조" loading="lazy" />
+                <img src="./assets/spl_th_fixed9.png" width="606" height="427" alt="빛과 그림자가 드리운 콘크리트 계단" loading="lazy" />
                 <div class="special__overlay inside__overlay">
-                  <h4>손톱만 한 케비가 잠입했다</h4>
-                  <p>AI가 수많은 답을 내놓는 시대에 인간의 한 끗 차이가 중요함을 이야기하는 코너. AI 시대에 인간의 판단력이 중요해지는 산업·문화 트렌드.</p>
+                  <h4>빛과 색, 재료가 만드는 공간의 표정</h4>
+                  <p>거친 콘크리트의 질감부터 계단 위에 내려앉은 빛과 그림자까지. 공간을 채우는 재료와 색의 이야기를 따라, 익숙한 풍경 속에 숨은 감각과 새로운 가치를 발견해봅니다.</p>
                   <span class="special__detail">자세히 보기</span>
                 </div>
               </a>
@@ -324,10 +324,10 @@
             </article>
             <article class="inside__card">
               <a class="special__thumbnail inside__thumbnail" href="#">
-                <img src="./assets/ou_th_4.png" width="606" height="384" alt="도심의 유리 외벽 빌딩" loading="lazy" />
+                <img src="./assets/spl_th_fixed10.png" width="606" height="427" alt="도심 속 유리 외벽의 업무용 건물" loading="lazy" />
                 <div class="special__overlay inside__overlay">
-                  <h4>손톱만 한 케비가 잠입했다</h4>
-                  <p>AI가 수많은 답을 내놓는 시대에 인간의 한 끗 차이가 중요함을 이야기하는 코너. AI 시대에 인간의 판단력이 중요해지는 산업·문화 트렌드.</p>
+                  <h4>사람과 공간 사이, 더 나은 일상을 잇다</h4>
+                  <p>도시의 풍경을 이루는 건물에는 사람과 공간을 이어주는 기술이 숨어 있습니다. 안과 밖, 일과 쉼의 경계에서 더 편안하고 풍요로운 일상을 만드는 연결의 이야기를 만나봅니다.</p>
                   <span class="special__detail">자세히 보기</span>
                 </div>
               </a>
